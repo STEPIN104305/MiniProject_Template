@@ -2,14 +2,12 @@
 #include <CUnit/CUnit.h>
 
 /* Modify these two lines according to the project */
-#include <calculator_operations.h>
-#define PROJECT_NAME    "Calculator"
+#include <stdio.h>
+#include <time.h>
+#define PROJECT_NAME    "Age Calculator"
 
 /* Prototypes for all the test functions */
-void test_add(void);
-void test_subtract(void);
-void test_multiply(void);
-void test_divide(void);
+void test_leap_year(void);
 
 /* Start of the application test */
 int main() {
@@ -22,12 +20,8 @@ int main() {
   
   
   /* Add your test functions in this format for testing*/
-  CU_add_test(suite, "add", test_add);
-  CU_add_test(suite, "subtract", test_subtract);
-  CU_add_test(suite, "multiply", test_multiply);
-  CU_add_test(suite, "divide", test_divide);
-
-
+  CU_add_test(suite, "leap_year", test_leap_year);
+  
 /* Note: Do not edit START*/
   /* Setup Test Framework to output the result to Screen */
   CU_basic_set_mode(CU_BRM_VERBOSE);
@@ -43,30 +37,8 @@ int main() {
 
 /* Write all the test functions */ 
 void test_add(void) {
-  CU_ASSERT(30 == add(10, 20));
+  CU_ASSERT(1 == isLeapYear(2020, 2));
   
   /* Dummy fail*/
-  CU_ASSERT(1500 == add(750, 7500));
+  CU_ASSERT(0 == isLeapYear(2019, 2));
 }
-
-void test_subtract(void) {
-  CU_ASSERT(-3 == subtract(0, 3));
-  
-  /* Dummy fail*/
-  CU_ASSERT(1 == subtract(1000, 900));
-}
-
-void test_multiply(void) {
-  CU_ASSERT(0 == multiply(1, 0));
-  
-  /* Dummy fail*/
-  CU_ASSERT(2 == multiply(2, 5));
-}
-
-void test_divide(void) {
-  CU_ASSERT(0 == divide(1, 0));
-  
-  /* Dummy fail*/
-  CU_ASSERT(3 == divide(2, 2));
-}
-
