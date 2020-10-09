@@ -87,7 +87,7 @@ int main()
     printf("The Life Period based on the generated age is : ");
     if(year>=0 && year<=11)
     {
-        printf("Chidhood");
+        printf("Childhood");
         if(year==0 && days<=42 && month<=1)
         {
            printf("(Newborn Child)");
