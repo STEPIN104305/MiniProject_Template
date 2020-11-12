@@ -1,5 +1,4 @@
-#include <stdio.h>
-#include <time.h>
+#include <Age_Calculator_Header.h>
 
 /*check given year is leap year or not*/
 int isLeapYear(int year, int mon)
