@@ -4,6 +4,9 @@ PROJECT_NAME = Age Calculator
 # Output directory
 BUILD = build
 
+#compiler
+CC=gcc
+
 # All source code files
 SRC = project_main.c\
 
@@ -22,7 +25,7 @@ PROJECT_OUTPUT = $(BUILD)/$(PROJECT_NAME).out
 DOCUMENTATION_OUTPUT = documentation/html
 
 # Default target built
-$(PROJECT_NAME):all
+$(PROJECT_NAME):Debug
 
 # Run the target even if the matching name exists
 .PHONY: run clean test  doc all
