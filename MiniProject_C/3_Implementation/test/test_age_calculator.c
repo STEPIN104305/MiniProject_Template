@@ -2,8 +2,7 @@
 #include <CUnit/CUnit.h>
 
 /* Modify these two lines according to the project */
-#include <stdio.h>
-#include <time.h>
+#include <Age_Calculator_header.h>
 #define PROJECT_NAME    "Age Calculator"
 
 /* Prototypes for all the test functions */
@@ -36,7 +35,7 @@ int main() {
 }
 
 /* Write all the test functions */ 
-void test_add(void) {
+void test_leap_year(void) {
   CU_ASSERT(1 == isLeapYear(2020, 2));
   
   /* Dummy fail*/
