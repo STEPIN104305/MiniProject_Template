@@ -31,8 +31,7 @@ int main() {
   /* Cleaning the Resources used by Unit test framework */
   //CU_cleanup_registry();
 /* Note: Do not edit END */
-  //return 0;
-}
+  //return 0;}
 int isLeapYear(int year, int mon)
 {
     int flag = 0;
@@ -60,8 +59,7 @@ int isLeapYear(int year, int mon)
   CU_ASSERT(1 == isLeapYear(2020, 2));
 
   /* Dummy fail*/
-  //CU_ASSERT(0 == isLeapYear(2019, 2));
-}*/
+  //CU_ASSERT(0 == isLeapYear(2019, 2));}
 #include "unity.h"
 #include "unity_internals.h"
 #include "functions.h"
