@@ -1,7 +1,8 @@
 #include <CUnit/Basic.h>
 #include <CUnit/CUnit.h>
 
-#include <Age_Calculator_header.h>
+#include <stdio.h>
+#include <time.h>
 #define PROJECT_NAME    "Age Calculator"
 
 /* Prototypes for all the test functions */
