@@ -8,11 +8,10 @@ BUILD = build
 SRC = project_main.c\
 
 # All test source files
-#TEST_SRC = src/calculator_operations.c\
-#test/test_calculator_operations.c\
+TEST_SRC = test/test_age_calculator.c\
 #unity/unity.c\
 
-#TEST_OUTPUT = $(BUILD)/Test_$(PROJECT_NAME).out
+TEST_OUTPUT = $(BUILD)/Test_$(PROJECT_NAME).out
 
 # All include folders with header files
 #INC	= -Iinc\
@@ -46,9 +45,9 @@ doc:
 	make -C ./documentation
 
 # Build and run the unit tests
-#test:$(BUILD)
-#	gcc $(TEST_SRC) $(INC) -o $(TEST_OUTPUT) $(INCLUDE_LIBS)
-#	./$(TEST_OUTPUT)
+test:$(BUILD)
+	gcc $(TEST_SRC) -o $(TEST_OUTPUT)
+	./$(TEST_OUTPUT)
 
 # Remove all the built files, invoke by `make clean`
 clean:
