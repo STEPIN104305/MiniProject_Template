@@ -33,7 +33,28 @@ int main() {
 /* Note: Do not edit END */
   return 0;
 }
-
+int isLeapYear(int year, int mon)
+{
+    int flag = 0;
+    if (year % 100 == 0)
+    {
+            if (year % 400 == 0)
+            {
+                    if (mon == 2)
+                    {
+                            flag = 1;
+                    }
+            }
+    }
+    else if (year % 4 == 0)
+    {
+            if (mon == 2)
+            {
+                    flag = 1;
+            }
+    }
+    return (flag);
+}
 /* Write all the test functions */
 void test_leap_year(void) {
   CU_ASSERT(1 == isLeapYear(2020, 2));
