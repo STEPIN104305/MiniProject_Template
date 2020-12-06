@@ -1,41 +1,37 @@
-/*#include <CUnit/Basic.h>
+#include <CUnit/Basic.h>
 #include <CUnit/CUnit.h>
 
 #include <stdio.h>
 #include <time.h>
 #define PROJECT_NAME    "Age Calculator"
 
-/* Prototypes for all the test functions/* 
+// Prototypes for all the test functions
 void test_leap_year(void);
 
-/* Start of the application test /*
+// Start of the application test 
 int main() {
 /* Note: Do not edit START*/
   /*Initialize and setup the Test Framework */
-  /*if (CUE_SUCCESS != CU_initialize_registry())
+  if (CUE_SUCCESS != CU_initialize_registry())
     return CU_get_error();
   CU_pSuite suite = CU_add_suite(PROJECT_NAME, 0, 0);
 /* Note: Do not edit END */
 
 
   /* Add your test functions in this format for testing*/
-  //CU_add_test(suite, "leap_year", test_leap_year);
+  CU_add_test(suite, "leap_year", test_leap_year);
 
 /* Note: Do not edit START*/
   /* Setup Test Framework to output the result to Screen */
-  //CU_basic_set_mode(CU_BRM_VERBOSE);
+  CU_basic_set_mode(CU_BRM_VERBOSE);
 
   /* run the unit test framework*/
-  //CU_basic_run_tests();
+  CU_basic_run_tests();
 
   /* Cleaning the Resources used by Unit test framework */
-  //CU_cleanup_registry();
+  CU_cleanup_registry();
 /* Note: Do not edit END */
-  //return 0;}
-#include "unity.h"
-#include "unity_internals.h"
-#include <stdio.h>
-#include <time.h>
+  return 0;
 int isLeapYear(int year, int mon)
 {
     int flag = 0;
@@ -59,7 +55,7 @@ int isLeapYear(int year, int mon)
     return (flag);
 }
 /* Write all the test functions */
-/*void test_leap_year(void) {
+void test_leap_year(void) {
   CU_ASSERT(1 == isLeapYear(2020, 2));
 
   /* Dummy fail*/
