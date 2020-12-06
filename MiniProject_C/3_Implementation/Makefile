@@ -45,9 +45,9 @@ doc:
 	make -C ./documentation
 
 # Build and run the unit tests
-test:$(BUILD)
-	gcc $(TEST_SRC) -o $(TEST_OUTPUT)
-	./$(TEST_OUTPUT)
+#test:$(BUILD)
+#	gcc $(TEST_SRC) -o $(TEST_OUTPUT)
+#	./$(TEST_OUTPUT)
 
 # Remove all the built files, invoke by `make clean`
 clean:
