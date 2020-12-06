@@ -32,6 +32,10 @@ int main() {
   //CU_cleanup_registry();
 /* Note: Do not edit END */
   //return 0;}
+#include "unity.h"
+#include "unity_internals.h"
+#include <stdio.h>
+#include <time.h>
 int isLeapYear(int year, int mon)
 {
     int flag = 0;
@@ -60,14 +64,7 @@ int isLeapYear(int year, int mon)
 
   /* Dummy fail*/
   //CU_ASSERT(0 == isLeapYear(2019, 2));}
-#include "unity.h"
-#include "unity_internals.h"
-#include "functions.h"
-#include "admin.h"
-#include "voter.h"
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
+
 void test_leap_year(void)
 {
 	TEST_ASSERT_EQUAL(1,isLeapYear(2020, 2));
