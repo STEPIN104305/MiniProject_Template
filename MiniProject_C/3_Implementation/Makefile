@@ -1,50 +1,54 @@
 # Name of the project
-PROJECT_NAME = Age Calculator
+PROJECT_NAME = Age_Calculator
 
 # Output directory
 BUILD = build
-
-#compiler
-CC=gcc
 
 # All source code files
 SRC = project_main.c\
 
 # All test source files
-TEST_SRC = project_main.c\
-test/test_age_calculator.c
+#TEST_SRC = src/calculator_operations.c\
+#test/test_calculator_operations.c\
+#unity/unity.c\
 
-TEST_OUTPUT = $(BUILD)/Test_$(PROJECT_NAME).out
+#TEST_OUTPUT = $(BUILD)/Test_$(PROJECT_NAME).out
 
 # All include folders with header files
-INC	= -Iinc
+#INC	= -Iinc\
+#-Iunity\
 
+#Library Inlcudes
+#INCLUDE_LIBS = 
+#INCLUDE_LIBS = -lcunit
+
+# Project Output name
 PROJECT_OUTPUT = $(BUILD)/$(PROJECT_NAME).out
 
 # Document files
 DOCUMENTATION_OUTPUT = documentation/html
 
 # Default target built
-$(PROJECT_NAME):Debug
+$(PROJECT_NAME):all
 
 # Run the target even if the matching name exists
-.PHONY: run clean test  doc all
+.PHONY: run clean test doc all
 
 all: $(SRC) $(BUILD)
-	gcc $(SRC) $(INC) -o $(PROJECT_OUTPUT).out
+	gcc $(SRC) -o $(PROJECT_OUTPUT)
 
 # Call `make run` to run the application
 run:$(PROJECT_NAME)
-	./$(PROJECT_OUTPUT).out
+	./$(PROJECT_OUTPUT)
 
 # Document the code using Doxygen
 doc:
 	make -C ./documentation
 
 # Build and run the unit tests
-test:$(BUILD)
-	gcc $(TEST_SRC) $(INC) -o $(TEST_OUTPUT) -lcunit
-	./$(TEST_OUTPUT)
+#test:$(BUILD)
+#	gcc $(TEST_SRC) $(INC) -o $(TEST_OUTPUT) $(INCLUDE_LIBS)
+#	./$(TEST_OUTPUT)
 
 # Remove all the built files, invoke by `make clean`
 clean:
