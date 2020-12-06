@@ -9,13 +9,13 @@ SRC = project_main.c\
 
 # All test source files
 TEST_SRC = test/test_age_calculator.c\
-#unity/unity.c\
+unity/unity.c\
 
 TEST_OUTPUT = $(BUILD)/Test_$(PROJECT_NAME).out
 
 # All include folders with header files
-#INC	= -Iinc\
-#-Iunity\
+INC	= -Iinc\
+-Iunity\
 
 #Library Inlcudes
 #INCLUDE_LIBS = 
